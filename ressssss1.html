@@ -1,0 +1,55 @@
+</div>
+   
+<h2 style="text-align: center"> Login </h2>
+<div class="form-container">
+
+   <form action="#">
+
+      <div class="input-cnt">
+         <i class="material-icons">person</i>
+         <input type="text" placeholder="Email or username" name="email" />
+      </div>
+      
+      <div class="input-cnt">
+         <i class="material-icons">lock</i>
+         <input type="password" placeholder="Password" name="password" />
+      </div>
+      
+      <div class="input-cnt">
+         <input type="submit" value="Login" />
+      </div>
+      
+   </form>
+
+
+
+
+   $email = $_POST['email'];
+   $email = $_POST['email'];
+   
+   // Database connection here
+   $con = new mysqli("localhost","root","","test_db");
+   if($con->connect_error)  {
+      die("Failed to connect : ".$con->connect_error);
+      
+   }
+   else{
+      $stmt = $con->prepare("select * from user where email = ?");
+      $stmt = $con->bind_param("s", $email);
+      $stmt->execute();
+      $stmt_result = $stmt->get_result();
+   is($stmt_result->num_row > 0) {
+   $data = $stmt_result->fetch_assoc();
+   if($data['password'] === $password){
+      "<h2> Login Successfully</h2>";
+   
+   }else{
+      echo "<h2> Invalid Email or passwoord</h2>"
+   }
+   }else {
+      echo "<h2>Invalid Email or Password</h2>";
+   }
+   
+   }
+
+
