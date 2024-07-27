@@ -23,11 +23,6 @@ background-color: #173459;
          background-repeat: no-repeat;
          background-position: fixed;
          background-attachment: center;
-         /* keep increasing the value of */
-         /* the background-size property */
-         /* until the background covers */
-         /* the entire page */
-       /*  background-size: 200%;*/
          
       }
 
