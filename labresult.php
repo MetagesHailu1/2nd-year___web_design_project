@@ -76,8 +76,6 @@ while($row=mysqli_fetch_assoc($result)) {
 
     <style type="text/css">
 
-
-
       body{
    background-color:antiquewhite;
    height: 1000px;
@@ -165,9 +163,6 @@ header{
 #hotels:hover .lodge-div-title, .lodge-small-divs:hover .lodge-div-title{
 	color: #1687af;
 }
-
-
-
 
 
 
