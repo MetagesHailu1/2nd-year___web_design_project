@@ -2,7 +2,6 @@
 include("database.php");
 ?>
 
-
 <?php
 session_start();
 
@@ -27,8 +26,6 @@ if(!isset($_SESSION['patient_name'])){
    background-color:snow;
    height: 1000px;
 }
-
-
 
 
 .container {
